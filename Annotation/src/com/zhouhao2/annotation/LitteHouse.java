@@ -3,7 +3,7 @@ package com.zhouhao2.annotation;
 public class LitteHouse  implements House{
 
 	@Schdule(breakfast="main food",lunch="main food",dinner="main food")
-    @SuppressWarnings("deprecation")
+        @SuppressWarnings("deprecation")
 	public void open() {
 		System.out.println("open");
 	}
