@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/home/zhouhao2/myGit/android_Java/Service/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 62,
+                    "endOffset": 113
+                },
+                "from": {
+                    "file": "/home/zhouhao2/myGit/android_Java/Service/app/src/main/res/values-v11/styles.xml",
+                    "position": {
+                        "startLine": 1,
+                        "startColumn": 1,
+                        "startOffset": 14,
+                        "endColumn": 60,
+                        "endOffset": 73
+                    }
+                }
+            }
+        ]
+    }
+]
