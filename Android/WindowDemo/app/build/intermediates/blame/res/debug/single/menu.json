@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/menu/menu_scrolling.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/menu/menu_scrolling.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/menu/main.xml"
+    }
+]

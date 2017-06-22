@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_6cd2f0b8ceaa4c0937d11d13d6599aa5be1aa38d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/49a3c112d351bc6785a845ef2c5393d57d051f2b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_f68a66776b3514961d5f5426896de9daf9cdc4ad.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/91d415eb483efd094f7a65540c338abe6e848845/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_64c910344816a4b6538de8a958047e129eb866ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/91d415eb483efd094f7a65540c338abe6e848845/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_64c910344816a4b6538de8a958047e129eb866ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_18a162b6c21221a2ee465a69fd81ab34bc60f3b9.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/49a3c112d351bc6785a845ef2c5393d57d051f2b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f68a66776b3514961d5f5426896de9daf9cdc4ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/91d415eb483efd094f7a65540c338abe6e848845/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_f7881aac079524094c99264242b440c272fab007/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e04e2be724c22d8944201bd8fcbbdb9f5e9a0e9f">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_39657ef7062762bc47c851cc3ed24381836172ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/95708b73c5220645369b3c7592b7deec7eea2b93/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f94b73542b20912b303e8ec49f1c39cce88db62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_18a162b6c21221a2ee465a69fd81ab34bc60f3b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/91d415eb483efd094f7a65540c338abe6e848845/output/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_f7881aac079524094c99264242b440c272fab007.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_32c43081729f0b7ad8cc85811e3801b73e7ffa19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/4697bb9079fc78916ba2e27c418634c42c516ab6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84c39531416655e96cad4bb91dfa60f971564430/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_95e8b79460819ac2c64d2f637c38f5f612f59d65/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/95708b73c5220645369b3c7592b7deec7eea2b93/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_4f94b73542b20912b303e8ec49f1c39cce88db62.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/.android/build-cache/4697bb9079fc78916ba2e27c418634c42c516ab6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/classes_84c39531416655e96cad4bb91dfa60f971564430.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/zhouhao2/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_95e8b79460819ac2c64d2f637c38f5f612f59d65.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6cd2f0b8ceaa4c0937d11d13d6599aa5be1aa38d/classes.dex" />
+    </item>
+
+</items>

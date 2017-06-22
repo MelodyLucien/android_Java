@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/ShowScrolDrmCheck/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/ShowScrolDrmCheck/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/ShowScrolDrmCheck/app/build/intermediates/res/merged/debug/menu/show.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/ShowScrolDrmCheck/app/src/main/res/menu/show.xml"
+    }
+]

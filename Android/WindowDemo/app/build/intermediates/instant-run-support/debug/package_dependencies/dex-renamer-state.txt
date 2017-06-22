@@ -1,0 +1,25 @@
+#Wed Jun 21 13:58:58 CST 2017
+renamed.7=classes4.dex
+renamed.6=classes6.dex
+renamed.5=classes.dex
+renamed.4=classes3.dex
+renamed.3=classes5.dex
+renamed.2=classes7.dex
+renamed.1=classes8.dex
+renamed.0=classes2.dex
+base.7=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_95e8b79460819ac2c64d2f637c38f5f612f59d65
+base.6=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_18a162b6c21221a2ee465a69fd81ab34bc60f3b9
+base.5=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f68a66776b3514961d5f5426896de9daf9cdc4ad
+base.4=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6cd2f0b8ceaa4c0937d11d13d6599aa5be1aa38d
+base.3=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f94b73542b20912b303e8ec49f1c39cce88db62
+base.2=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_64c910344816a4b6538de8a958047e129eb866ee
+base.1=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_f7881aac079524094c99264242b440c272fab007
+base.0=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84c39531416655e96cad4bb91dfa60f971564430
+file.7=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_95e8b79460819ac2c64d2f637c38f5f612f59d65/classes.dex
+file.6=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_18a162b6c21221a2ee465a69fd81ab34bc60f3b9/classes.dex
+file.5=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f68a66776b3514961d5f5426896de9daf9cdc4ad/classes.dex
+file.4=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6cd2f0b8ceaa4c0937d11d13d6599aa5be1aa38d/classes.dex
+file.3=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f94b73542b20912b303e8ec49f1c39cce88db62/classes.dex
+file.2=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_64c910344816a4b6538de8a958047e129eb866ee/classes.dex
+file.1=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_f7881aac079524094c99264242b440c272fab007/classes.dex
+file.0=/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_84c39531416655e96cad4bb91dfa60f971564430/classes.dex
