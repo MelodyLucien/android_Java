@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    <Button 
+        android:id="@+id/startAccessi"
+        android:layout_width="200px"
+        android:layout_height="100px"
+        android:text="启动"
+        android:layout_below="@id/text"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/startAccessi"
+        android:layout_alignRight="@+id/startAccessi"
+        android:layout_below="@+id/startAccessi"
+        android:layout_marginTop="12dp"
+        android:text="click" />
+
+</RelativeLayout>
