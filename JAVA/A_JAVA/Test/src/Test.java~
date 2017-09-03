@@ -1,0 +1,39 @@
+import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
+
+
+public class Test implements Serializable{
+	
+	public static void main(String[] args) {
+		short i=1;
+		i=(short)(i+1);
+		System.out.println(i);
+		
+		byte num =-1;
+		System.out.println(num>>>33);
+		
+		String a="你";    //一个字符，连个字节
+		int length=0;
+		try {
+			length = a.getBytes("GBK").length;
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		//System.out.println(a);
+		System.out.println(length);
+		
+		B b=new B();
+	}
+
+}
+
+class B extends Test{
+	
+	static{
+		System.out.println("b");
+	}
+	
+		public B() {
+               System.out.println(2);
+		}
+}

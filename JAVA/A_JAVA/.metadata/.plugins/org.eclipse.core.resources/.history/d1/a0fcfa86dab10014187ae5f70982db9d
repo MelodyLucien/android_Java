@@ -1,0 +1,116 @@
+package pattern_matcher;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+/*
+ * 常用的几种正则表达式
+ * 身份证号码的验证：“\\d{15}|\\d{18}”
+ * email的验证："\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*"
+ * ip地址的检查："\\d{1,3}+\\.\\d{1,3}+\\.\\d{1,3}+\\.\\d{1,3}"
+ * 中文名的检查："^[\u4e00-\u9fa5]+$"
+ * 字符串匹配的返回 "\\d+"
+ * 电话号码的匹配："[1][3,5]\\d{9}"
+ * X?表示一个或零个  吝啬
+ * X+表示一个或多个  贪婪
+*/
+
+
+/**
+ * A typical invocation sequence is thus 
+
+ Pattern p = Pattern.compile("a*b");
+ Matcher m = p.matcher("aaaaab");
+ boolean b = m.matches();
+ 
+ A matches method is defined by this class as a convenience for 
+ when a regular expression is used just once. 
+ This method compiles an expression and matches an input sequence 
+ against it in a single invocation. The statement 
+
+ boolean b = Pattern.matches("a*b", "aaaaab");
+
+is equivalent to the three statements above, 
+though for repeated matches it is less efficient 
+since it does not allow the compiled pattern to be reused
+ *
+ */
+public class Prictice {
+	
+	public Prictice() throws IOException{
+	Pattern p = null; //正则表达式 
+	Matcher m = null; //操作的字符串 
+	boolean b = false;
+	String input=getString();
+	System.out.println(input);
+	
+	//创建一个模式
+	p=creatRegex(getRegex());
+	//创建一个匹配
+	m=creatMatcher(p,input);
+	//输出查询结果
+	doSomeWork(input,getRegex(),m);
+	}
+	private String getRegex() {
+		String string="<a\\s.*?href=\"([^\"]+)\"[^>]*>(.*?)</a>";
+		string=".*<a.*?</a>.*";
+		return string;
+	}
+	
+	
+	private void doSomeWork(String input, String regex, Matcher m) {
+		   System.out.println("需要操作的语句为 ： "+input);
+		   System.out.println("      正则表达式为 ："+regex);
+		   System.out.println("------------------------------------");
+		  if(m.matches()){
+			    System.out.println("匹配成功");
+			    while(m.find()){
+					 System.out.println(m.group());
+					 }
+		  }
+		  else{
+			    System.out.println("匹配不成功");
+		  }
+		
+    }
+	
+	/**
+	 * 根据当前匹配字符串创建一个匹配
+	 * @param p
+	 * @param input
+	 * @return
+	 */
+	private Matcher creatMatcher(Pattern p, String input) {
+		Matcher matcher=p.matcher(input);
+		return matcher;
+	}
+	
+	
+	/**
+	 * 创建一个已经编译好的正则表达式
+	 * @param regex
+	 * @return
+	 */
+	public Pattern creatRegex(String regex){
+		Pattern pattern=Pattern.compile(regex);
+		return pattern;
+	}
+	public static void main(String argus[]) throws IOException{
+	      new Prictice();
+	}
+	
+	private String getString() throws IOException {
+		StringBuffer buffer=new StringBuffer();
+		
+		File file=new File("d://search.txt");
+		BufferedReader reader=new BufferedReader(new FileReader(file));
+		String data;
+		while((data=reader.readLine())!=null)
+		{
+			buffer=buffer.append(data);
+		}
+		return buffer.toString();
+	}
+}

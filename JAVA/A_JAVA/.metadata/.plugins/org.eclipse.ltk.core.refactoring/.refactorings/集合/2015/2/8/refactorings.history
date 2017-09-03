@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;集合/src/listVSmap&apos;&#x0D;&#x0A;- Original project: &apos;集合&apos;&#x0D;&#x0A;- Destination element: &apos;集合/src/listVSmap&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Set.HashSet.Test.java&#x0D;&#x0A;     Set.HashSet.Monkey.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;listVSmap" element1="/src&lt;Set.HashSet{Test.java" element2="/src&lt;Set.HashSet{Monkey.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1424077745775" units="2" version="1.0"/>
+</session>

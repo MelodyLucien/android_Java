@@ -1,0 +1,26 @@
+package o5CommonShareVariable;
+
+public class Client {
+	
+	private int data=-1;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+    for (int i = 0; i < 2; i++) {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				
+
+			}
+		}).start();
+	}
+		
+	}
+
+}

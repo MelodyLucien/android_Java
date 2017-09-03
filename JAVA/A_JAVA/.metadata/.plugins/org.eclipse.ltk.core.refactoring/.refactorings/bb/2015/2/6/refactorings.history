@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;Test/src&apos;&#x0D;&#x0A;- Original project: &apos;bb&apos;&#x0D;&#x0A;- Destination element: &apos;Test/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     bb/src/矩阵逆置&#x0D;&#x0A;     bb/src/Exception&#x0D;&#x0A;     bb/src/正则表达式&#x0D;&#x0A;     bb/src/final用法" description="Copy packages" destination="=Test/src" element1="/src&lt;矩阵逆置" element2="/src&lt;Exception" element3="/src&lt;正则表达式" element4="/src&lt;final用法" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1422861558683" version="1.0"/>
+</session>

@@ -1,0 +1,17 @@
+package com.zh.reconstruct;
+/**
+ * the program is to add comments for the specific strings
+ * @author Administrator
+ */
+public class TextDeals {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+           
+	}
+
+	
+	
+}

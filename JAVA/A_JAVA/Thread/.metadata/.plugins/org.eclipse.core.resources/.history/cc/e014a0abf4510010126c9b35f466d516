@@ -1,0 +1,13 @@
+package 线程之间对于变量的修改;
+
+public class Threadd extends Thread{
+	public static boolean ShowPath=false;
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+	
+
+}

@@ -1,0 +1,28 @@
+package com.test.obj;
+
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Test {
+	public static void main(String[] args) {
+        Son son1=new Son("xiao");
+        Son son2=new Son("xiao");
+        Son son3=new Son("xiao");
+        Son son4=new Son("da");
+        System.out.println(son1+"  "+son2+"  "+son1.hashCode()+"   "+son2.hashCode());
+        
+        Set<Son> set=new HashSet();
+        //在添加第一个的时候没有用eauqls方法
+        set.add(son2);
+        
+        //之后每加一次 先调用hascode方法，在调用equals方法
+        set.add(son1);
+        set.add(son3);
+        set.add(son4);
+        System.out.println(set.size());
+        
+	}
+	
+	//set中先判断hashcode，是否相等，然后再判断equals方法的返回值 最后的结论
+}

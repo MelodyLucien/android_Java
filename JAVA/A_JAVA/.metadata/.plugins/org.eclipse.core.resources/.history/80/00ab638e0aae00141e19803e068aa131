@@ -1,0 +1,16 @@
+
+public class Test {
+	
+	public static void main(String[] args) {
+		short i=1;
+		i=(short)(i+1);
+		System.out.println(i);
+		
+		byte num =-1;
+		System.out.println(num>>>33);
+		
+		char a='Äã';
+		System.out.println(a);
+	}
+
+}

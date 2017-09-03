@@ -1,0 +1,7 @@
+文件路径的问题
+
+可以使用         File f=new File("src/test.txt");来查找文件
+
+
+或者是		URL url=this.getClass.getResource("/map_1.txt");
+        File f=new File(url.toURI());

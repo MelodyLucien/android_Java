@@ -1,0 +1,15 @@
+package o5CommonShareVariable;
+
+public class Client {
+	
+	private int data=-1£»
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		
+	}
+
+}

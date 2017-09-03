@@ -1,0 +1,220 @@
+UART_115200
+
+AC_ON
+MIU0_DQS-OK
+MIU1_DQS-OK
+BIST0-OK
+BIST1-OK
+_U
+Relocation Offset is: 01200000
+[AT][MB][start ub][324]
+
+U-Boot 2011.06-00000-g4ac805b-dirty (Jan 28 2016 - 09:54:14)  MBOT-2.12.$Change: 1206504 $
+
+
+
+[MIU INFO] miu opencreate instance at 345aaad0 with private size 80 bytes at 345aab18
+create instance at 345aab70 with private size 48 bytes at 345aabb8
+
+uboot held at [342ddf60~36200000],size=01f220a0
+CPU  : Muji
+Board: BD_MST072B_20AEV_MUJI
+DRAM:  354 MiB
+Now running in RAM - U-Boot at: 35300000
+FCIE_MODE_GPIO_PAD_DEFO_SPEED
+FCIE_MODE_8BITS_MACRO_HIGH_SPEED
+FCIE_MODE_32BITS_MACRO_HS400_DS
+
+eMMC: HS400 200MHz 
+eMMC 7.28 GB [E8FFF8h]
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+mmc change mount : tvdatabase
+Size of file "/MAC_ADDR.txt" from mmc device 0 partition tvdatabase: -1 bytes
+filesize:4294967295
+Loading file "/MAC_ADDR.txt" at offset 0x0 from mmc device 0 partition tvdatabase
+** File not found /MAC_ADDR.txt **
+[ERROR] vfs_read:483: ext4load mmc fail
+file load error, no mac addr file!
+
+set default ethaddr.
+MAC:  0x0: 0xc: 0xe7: 0x6:0x0: 0x0
+#######################################################################
+#######################################################################
+
+[CPU INFO] cpu opencreate instance at 345bb078 with private size 44 bytes at 345bb0c0
+CPUIoctl - MDrv_CMD_CPU_QueryClock
+[UTOPIA INFO] close moduleNames[38]: MODULE_CPU
+
+msIR_Initialize
+[AT][MBoot][Driver Init][524]
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+MPOOL size : 0x200000
+
+Changelist:     24543697
+============= set bootargs ===============
+Hit any key to stop autoboot:  0 
+fore uup IRKey [0xff]
+Writing to MMC(0)... 128 blocks written: OK
+128 blocks written: OK
+done
+AC on
+
+[CPU INFO] cpu opencreate instance at 345bb328 with private size 44 bytes at 345bb370
+CPUIoctl - MDrv_CMD_CPU_QueryClock
+[UTOPIA INFO] close moduleNames[38]: MODULE_CPU
+
+create instance at 345bb328 with private size 344 bytes at 345bb370
+MDrv_PNL_Init u32PnlRiuBaseAddr = 1f200000
+MDrv_PNL_Init u32PMRiuBaseAddr = 1f000000
+LINK TYPE = EXT 
+[MHal_PNL_Init_MOD][2136]Vx1 1 division
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=40
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msSetVBY1RconValue][1748]u16temp= 11
+[_MDrv_PNL_Init_LPLL][339]pstPanelInitData->u16Width=3840, pstPanelInitData->u16Height=2160
+[_MDrv_PNL_Init_LPLL][341]u16HTotal=4400,u16VTotal=2250,pstPanelInitData->u16HTotal=4400,pstPanelInitData->u16VTotal=2250, u16DefaultVFreq=600
+@@11=11
+[_MDrv_PNL_Init_Output_Dclk][391]pstPanelInitData->u16Width=3840, pstPanelInitData->u16Height=2160
+[_MDrv_PNL_Init_Output_Dclk][393]u16HTotal=4400,u16VTotal=2250,pstPanelInitData->u16HTotal=4400,pstPanelInitData->u16VTotal=2250, u16DefaultVFreq=600
+@@11=11
+@@11=11
+[MApi_XC_MLG_GetStatus, 1874]No instance existed, please get an instance by calling MApi_XC_Init() first
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+Init PWM0Init PWM1[msReadEfuse][1712]u32Result=50000051, after mask u32Result=40
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msReadEfuse][1712]u32Result=50000051, after mask u32Result=11
+[msSetVBY1RconValue][1748]u16temp= 11
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+[ERROR] MDrv_URSA_COM_Get_URSA_Type:472: [URSA_COMMON] ursa_type is an illeagal value !
+Wait for PM51 standby DRAM ...........PM51 run ok...........mmc change mount : tvconfig
+Size of file "/boot0.jpg" from mmc device 0 partition tvconfig: 88108 bytes
+Loading file "/boot0.jpg" at offset 0x0 from mmc device 0 partition tvconfig
+88108 bytes read
+create instance at 345d0d00 with private size 312 bytes at 345d0d48
+[AT][MB][JPD Decode][1405]
+
+[UTOPIA INFO] close moduleNames[35]: MODULE_NJPEG_EX
+
+create instance at 345d0d00 with private size 1720 bytes at 345d0d48
+
+[GOP INFO] gop opencreate instance at 345d1408 with private size 7760 bytes at 345d1450
+[GOP_SetGopExtendGwinInfo]WidthEnd 0x0 >WidthStart 0x0 
+[AT][MB][Show Logo][1454]
+
+---MsDrv_PNL_BackLigth_On:900 Set MsDrv_PNL_BackLigth_On DelayTask 558 
+u32NuttxVirtAddr =345ee0a0 
+The version of tee.bin is 00:00:00:00
+MPOOL size : 0x200000
+R2 Boot from 0x3ef40000
+
+[CPU INFO] cpu opencreate instance at 345bb4d0 with private size 44 bytes at 345bb518
+[AT][MBoot][Boot Nuttx][2841]
+## Booting kernel from Legacy Image at 25000000 ...
+   Image Name:   MStar-linux
+   Image Type:   ARM Linux Multi-File Image (uncompressed)
+   Data Size:    14361879 Bytes = 13.7 MiB
+   Load Address: 20280000
+   Entry Point:  20280000
+   Contents:
+      Image 0: 11824696 Bytes = 11.3 MiB
+      Image 1: 2537171 Bytes = 2.4 MiB
+## Loading init Ramdisk from multi component Legacy Image at 25000000 ...
+ramdisk start = 0x25b46e84, ramdisk end = 0x25db2557
+-usb_stop(USB_PORT0)
+-usb_stop(USB_PORT1)
+-usb_stop(USB_PORT2)
+-usb_stop(USB_PORT3)
+-usb_stop(USB_PORT4)
+   Loading Multi-File Image ... OK
+[AT][MB][start kr][2910]
+
+Starting kernel   ...
+
+set 64 bit mode 
+__fdt_pointer=0x23000000
+[    0.000000] [AT][KR][reset timer][3078]
+[    0.004199] thread_info_cache_init, alloc 1536 thread_pool
+[    0.402272] mtdoops: mtd device (mtddev=name/number) must be supplied
+[    0.611374] [SERIAL INPUT MANAGE] disable_serial : ~~bye(len:5)
+[    0.617324] [SERIAL INPUT MANAGE] enable_serial : (len: 0)
+[    0.622813] [KDEBUGD] enter : _MStar
+[    0.622813] 
+[    0.627990] [AT][KR][start init][3706]
+[    0.631742] [AutoTest][Kernel][start Initprocess][3706]
+[    0.638379] [SERIAL INPUT MANAGE] Managed tty_struct(.name:ttyS0) is freed !!!
+[    1.064724] init: /dev/hw_random not found
+[    1.069013] [SERIAL INPUT MANAGE] disable_serial : ~~bye(len:5)
+[    1.074937] [SERIAL INPUT MANAGE] enable_serial : (len: 0)
+[    1.080437] [KDEBUGD] enter : _MStar
+[    1.080437] 
+[    1.085619] [SERIAL INPUT MANAGE] Managed tty_struct(.name:ttyS0) is freed !!!
+[    1.104711] init: /dev/hw_random not found
+[    1.110843] fs_mgr: Warning: unknown flag block_validity
+[    1.116278] fs_mgr: Warning: unknown flag nodiscard
+[    1.121168] fs_mgr: Warning: unknown flag data=ordered
+[    1.126342] fs_mgr: Warning: unknown flag journal_checksum
+[    1.131861] fs_mgr: Warning: unknown flag block_validity
+[    1.137634] fs_mgr: Warning: unknown flag nodiscard
+[    1.142524] fs_mgr: Warning: unknown flag data=ordered
+[    1.147709] fs_mgr: Warning: unknown flag journal_checksum
+[    1.153231] fs_mgr: Warning: unknown flag block_validity
+[    1.158563] fs_mgr: Warning: unknown flag nodiscard
+[    1.163452] fs_mgr: Warning: unknown flag data=ordered
+[    1.168615] fs_mgr: Warning: unknown flag journal_checksum
+[    1.174119] fs_mgr: Warning: unknown flag block_validity
+[    1.179451] fs_mgr: Warning: unknown flag nodiscard
+[    1.184339] fs_mgr: Warning: unknown flag data=ordered
+[    1.189496] fs_mgr: Warning: unknown flag journal_checksum
+[    1.198617] EXT4-fs (mmcblk0p10): error loading journal
+[    1.205151] fs_mgr: Failed to mount an un-encryptable or wiped partition on/dev/block/platform/mstar_mci.0/by-name/system at /system options: (null) error: Invalid argument
+[    1.227494] EXT4-fs (mmcblk0p11): VFS: Can't find ext4 filesystem
+[    1.234808] fs_mgr: Failed to mount an un-encryptable or wiped partition on/dev/block/platform/mstar_mci.0/by-name/userdata at /data options: (null) error: Invalid argument
+[    1.272375] init: fs_mgr_mount_all returned an error
+[    1.277643] init: fs_mgr_mount_all returned unexpected error 255
+[    1.284831] EXT4-fs (mmcblk0p8): VFS: Can't find ext4 filesystem
+[    1.314470] init: Unable to open persistent property directory /data/property errno: 2
+[    1.323286] init: cannot find '/system/bin/logd', disabling 'logd'
+[    1.329934] init: cannot find '/system/bin/lmkd', disabling 'lmkd'
+[    1.336405] init: cannot find '/system/bin/servicemanager', disabling 'servicemanager'
+[    1.344343] init: cannot find '/system/bin/vold', disabling 'vold'
+[    1.350615] init: cannot find '/system/bin/sdcard', disabling 'fuse_sdcard0'
+[    1.357731] init: cannot find '/system/bin/resourcemanager', disabling 'resourcemanager'
+[    1.366098] init: cannot find '/system/bin/netd', disabling 'netd'
+[    1.372302] init: cannot find '/system/bin/jamdeod', disabling 'jamdeod'
+[    1.379036] init: cannot find '/system/bin/debuggerd', disabling 'debuggerd'
+[    1.386112] init: cannot find '/system/bin/debuggerd64', disabling 'debuggerd64'
+[    1.393526] init: cannot find '/system/bin/surfaceflinger', disabling 'surfaceflinger'
+[    1.401562] init: cannot find '/system/bin/drmserver', disabling 'drm'
+[    1.408142] init: cannot find '/system/bin/mediaserver', disabling 'media'
+[    1.415081] init: cannot find '/system/bin/installd', disabling 'installd'
+[    1.422029] init: cannot find '/system/bin/install-recovery.sh', disabling 'flash_recovery'
+[    1.430466] init: cannot find '/system/bin/keystore', disabling 'keystore'
+[    1.437396] init: cannot find '/system/bin/app_process64', disabling 'zygote'
+[    1.444572] init: cannot find '/system/bin/app_process32', disabling 'zygote_secondary'
+[    1.452663] init: cannot find '/system/bin/browserserver', disabling 'browserserver'
+[    1.460459] init: cannot find '/system/bin/logwrapper', disabling 'misys'
+[    1.467305] init: cannot find '/system/bin/logwrapper', disabling 'cussysset'
+[    1.474485] init: cannot find '/system/bin/logwrapper', disabling 'hstvos'
+[    1.481411] init: cannot find '/system/bin/sh', disabling 'multiscreen'
+[    1.488106] init: cannot find '/system/bin/logcat', disabling 'hisenselog'
+[    1.495018] init: cannot find '/system/bin/startservice', disabling 'startservice'
+[    1.502658] init: cannot find '/system/bin/sh', disabling 'preload'
+[    1.508966] init: cannot find '/system/bin/logwrapper', disabling 'hidclient'
+[    1.516134] init: cannot find '/system/bin/sh', disabling 'bcmdl'
+[    1.522258] init: cannot find '/system/bin/sh', disabling 'drop-caches'
+[    1.528903] init: cannot find '/system/bin/sh', disabling 'toltech'
+[    1.535384] init: cannot find '/system/bin/sh', disabling 'unroot-tool'
+[    1.542068] init: cannot find '/system/bin/sh', disabling 'console'
+[    1.553480] init: cannot find '/system/bin/virtualkeypad', disabling 'virtualkeypad'
+[    1.561270] init: cannot find '/system/bin/busybox', disabling 'multicast'
+[    1.570871] init: cannot execve('/applications/secure_daemon'): No such file or directory

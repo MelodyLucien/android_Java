@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;线程之间对于变量的修改&apos; to &apos;线程相关/src&apos;&#x0D;&#x0A;- Original project: &apos;modefiy&apos;&#x0D;&#x0A;- Destination element: &apos;线程相关/src&apos;&#x0D;&#x0A;- Original element: &apos;modefiy/src/线程之间对于变量的修改&apos;" description="Copy package" destination="=线程相关/src" element1="/src&lt;线程之间对于变量的修改" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1421834653937" version="1.0"/>
+</session>

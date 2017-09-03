@@ -1,0 +1,42 @@
+package o5CommonShareVariable;
+package o5CommonShareVariable;
+
+import java.util.HashMap;
+import java.util.Random;
+
+/**
+ * 演示同一个线程中的共享变量的值不一致的情况
+ * @author zhouhao
+ *
+ */
+public class Client1 {
+	
+	private static int data=-1;
+	private static HashMap<Thread,Integer> thread =new HashMap<>();
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+    for (int i = 0; i < 2; i++) {
+    	
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				int data=new Random().nextInt();
+				System.out.println(Thread.currentThread().getName()+"put data ="+data);
+				Client.print();
+			}
+		}).start();
+	}
+		
+	}
+	
+	public static void print(){
+		System.out.println(Thread.currentThread().getName()+"from Client  data ="+data);
+	}
+
+}

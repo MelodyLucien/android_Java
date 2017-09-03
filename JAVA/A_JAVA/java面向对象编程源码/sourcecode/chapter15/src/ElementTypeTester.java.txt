@@ -1,0 +1,27 @@
+import java.util.*;
+public class ElementTypeTester {
+   public Set createSet(){
+     Set set=new HashSet();
+     set.add(new StringBuffer("Mike"));
+     return set;
+   }
+   public void printSet(Set set){
+     Iterator it=set.iterator();
+     while(it.hasNext()){
+       String str=(String)it.next();  //抛出ClassCastException
+       System.out.println(str);
+     }
+   }
+  public static void main(String args[]){
+    ElementTypeTester s=new ElementTypeTester();
+    Set set=s.createSet();
+    s.printSet(set);
+  }
+}
+
+
+/****************************************************
+ * 作者：孙卫琴                                     *
+ * 来源：<<Java面向对象编程>>                       *
+ * 技术支持网址：www.javathinker.org                *
+ ***************************************************/

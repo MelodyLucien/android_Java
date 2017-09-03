@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="E:/apache/apache-tomcat-7.0.29/lib/servlet-api.jar" sourcepath="E:/各种教程/java教程/马士兵/jsp视频/尚学堂科技_张志宇_SERVLET_JSP_视频教程_第一版/软件/java_ee_sdk-5-javadocs.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/E:/各种教程/java教程/马士兵/jsp视频/尚学堂科技_张志宇_SERVLET_JSP_视频教程_第一版/软件/java_ee_sdk-5-javadocs.zip!/docs/api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

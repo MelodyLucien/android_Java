@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;testConcurrentCollection.ConcurrentException&apos; to &apos;ConcurrentModifyException&apos;&#x0D;&#x0A;- Original project: &apos;线程相关&apos;&#x0D;&#x0A;- Original element: &apos;testConcurrentCollection.ConcurrentException&apos;&#x0D;&#x0A;- Renamed element: &apos;testConcurrentCollection.ConcurrentModifyException&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConcurrentException&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;testConcurrentCollection{ConcurrentException.java[ConcurrentException" matchStrategy="1" name="ConcurrentModifyException" qualified="false" references="true" similarDeclarations="false" stamp="1424082339596" textual="false" version="1.0"/>
+</session>

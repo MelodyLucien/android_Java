@@ -1,0 +1,17 @@
+
+public class Test {
+	
+	public static void main(String[] args) {
+		short i=1;
+		i=(short)(i+1);
+		System.out.println(i);
+		
+		byte num =-1;
+		System.out.println(num>>>33);
+		
+		String a="你看";    //一个字符，连个字节
+		int length=String
+		System.out.println(a);
+	}
+
+}
