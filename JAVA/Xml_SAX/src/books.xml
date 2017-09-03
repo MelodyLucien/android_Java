@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bookshelf>
+ <book id="1">
+   <bookname>java就业基础教程</bookname>
+   <author>张孝祥</author>
+   <price>59</price>
+</book>
+<book  id="2">
+   <bookname>java21就业基础教程</bookname>
+   <author>张孝祥2</author>
+   <price>592</price>
+</book>
+</bookshelf>
