@@ -2,7 +2,7 @@ package com.uz.eample;
 
 
 
-import java.util.List;
+import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -28,7 +28,13 @@ import org.xml.sax.XMLReader;
 		  
 		  reader.parse("src/restrictions.xml");
 
-		  List<String> books = handler.getapklist();
+		  HashMap<String, String> books = handler.getApkNames();
+		  
+		  
+		  if (books.containsKey("7.apk")) {
+			System.out.println("yes");
+		  }
+		  
 		  System.out.println(books);
 		 }
 	}

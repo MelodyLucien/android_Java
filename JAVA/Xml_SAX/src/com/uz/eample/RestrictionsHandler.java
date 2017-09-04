@@ -1,13 +1,14 @@
 package com.uz.eample;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class RestrictionsHandler extends DefaultHandler {
-	private List<String> apklist = new ArrayList<String>();
+	private HashMap<String, String> apks = new HashMap<String, String>();
 	private String currentNode = null;
 	private String apkname = null;
 
@@ -33,23 +34,23 @@ public class RestrictionsHandler extends DefaultHandler {
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
 		if (ELEMENTNAME.equals(currentNode)) {
-           if(ch != null){
-        	   String value = new String(ch, start, length);
-        	   apklist.add(value);
-           }
+			if (ch != null) {
+				String value = new String(ch, start, length);
+				apks.put(value, value);
+			}
 		}
 	}
 
 	@Override
 	public void endElement(String uri, String localName, String name) throws SAXException {
-		
+
 		if (ELEMENTNAME.equals(name)) {
 			apkname = null;
 		}
 		currentNode = null;
 	}
 
-	public List<String> getapklist() {
-		return apklist;
+	public HashMap<String, String> getApkNames() {
+		return apks;
 	}
 }
