@@ -16,16 +16,8 @@
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/color/abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/color/abc_primary_text_material_dark.xml"
-    },
-    {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",

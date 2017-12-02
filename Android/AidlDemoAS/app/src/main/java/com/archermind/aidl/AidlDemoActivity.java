@@ -127,8 +127,9 @@ public class AidlDemoActivity extends Activity implements OnClickListener {
 	private final ITaskCallBack.Stub mCallBack=new ITaskCallBack.Stub() {
 
 		@Override
-		public void onActionBack(String str) throws RemoteException {
+		public int onActionBack(String str) throws RemoteException {
 			Log.v(TAG,"onActionBack str="+str);
+			return 0;
 		}
 		
 	};

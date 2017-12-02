@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/AccessibilityServiceTest1/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/AccessibilityServiceTest1/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/zhouhao2/AndroidStudioProjects/AccessibilityServiceTest1/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
         "source": "/home/zhouhao2/AndroidStudioProjects/AccessibilityServiceTest1/app/src/main/res/drawable-mdpi/ic_launcher.png"
     }

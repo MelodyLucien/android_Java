@@ -2,12 +2,15 @@ package com.uz.eample;
 
 
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.HashMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
 	public class Sax {
@@ -25,11 +28,22 @@ import org.xml.sax.XMLReader;
 		  
 		  RestrictionsHandler handler = new RestrictionsHandler();
 		  reader.setContentHandler(handler);
+		  File file = new File("config","src");
 		  
-		  reader.parse("src/restrictions.xml");
+		  System.out.println("parent : "+file.getParent().toString());
+		  
+		  for (File f : file.listFiles()) {
+			  if(f.getName().equals("restrictions.xml")){
+				  System.out.println("match");
+			  }
+		   }
+		  
+		 
+		  
+		  System.out.println("dfsdafdsfds  "+file.getAbsolutePath());
+		 
 
 		  HashMap<String, String> books = handler.getApkNames();
-		  
 		  
 		  if (books.containsKey("7.apk")) {
 			System.out.println("yes");

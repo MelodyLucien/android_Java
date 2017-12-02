@@ -47,8 +47,9 @@ case TRANSACTION_onActionBack:
 data.enforceInterface(DESCRIPTOR);
 java.lang.String _arg0;
 _arg0 = data.readString();
-this.onActionBack(_arg0);
+int _result = this.onActionBack(_arg0);
 reply.writeNoException();
+reply.writeInt(_result);
 return true;
 }
 }
@@ -69,23 +70,26 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-@Override public void onActionBack(java.lang.String str) throws android.os.RemoteException
+@Override public int onActionBack(java.lang.String str) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
+int _result;
 try {
 _data.writeInterfaceToken(DESCRIPTOR);
 _data.writeString(str);
 mRemote.transact(Stub.TRANSACTION_onActionBack, _data, _reply, 0);
 _reply.readException();
+_result = _reply.readInt();
 }
 finally {
 _reply.recycle();
 _data.recycle();
 }
+return _result;
 }
 }
 static final int TRANSACTION_onActionBack = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
 }
-public void onActionBack(java.lang.String str) throws android.os.RemoteException;
+public int onActionBack(java.lang.String str) throws android.os.RemoteException;
 }

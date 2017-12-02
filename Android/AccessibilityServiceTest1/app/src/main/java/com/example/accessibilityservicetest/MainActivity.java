@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
             }
         });
         
-        //enableAccessibilityServiceInfo();
+        enableAccessibilityServiceInfo();
     }
 
     @Override

@@ -1,0 +1,7 @@
+#Wed Jul 12 10:47:52 CST 2017
+base.0=/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8d02f2521599de7cea001faa83f72e5e01d3bf60
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9f1998e9a953f0ff73a28c73808ac030dbc95daa/classes.dex
+base.1=/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9f1998e9a953f0ff73a28c73808ac030dbc95daa
+file.0=/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8d02f2521599de7cea001faa83f72e5e01d3bf60/classes.dex

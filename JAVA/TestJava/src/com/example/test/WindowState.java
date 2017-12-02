@@ -26,17 +26,23 @@ public final class WindowState {
 		
 		synchronized(windowState){
 			try {
-
 				Thread.sleep(4000);
-				
 				System.out.println("notify");
 				windowState.notify();
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
 			
-			System.out.println("state");
 		}
+		
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("state");
+		
 		
 		synchronized(windowState){
 			try {

@@ -84,12 +84,16 @@
         "source": "/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/res/layout/design_layout_snackbar_include.xml"
     },
     {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/notification_template_big_media.xml"
     },
     {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/select_dialog_multichoice_material.xml"
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/content_main2.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/layout/content_main2.xml"
     },
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
@@ -102,10 +106,6 @@
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/content_scrolling.xml",
-        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/layout/content_scrolling.xml"
     },
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
@@ -160,16 +160,16 @@
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/activity_scrolling.xml",
-        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/layout/activity_scrolling.xml"
-    },
-    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/layout.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/layout/layout.xml"
     },
     {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
@@ -192,6 +192,10 @@
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/res/layout/design_navigation_item.xml"
+    },
+    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/notification_template_big_media_narrow.xml"
     },
@@ -200,11 +204,11 @@
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
-        "source": "/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/res/layout/design_navigation_item.xml"
-    },
-    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/layout/notification_template_lines.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/layout/activity_main2.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/src/main/res/layout/activity_main2.xml"
     }
 ]

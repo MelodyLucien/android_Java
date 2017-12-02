@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/xml/symbols.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/xml/symbols.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/xml/qwerty.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/xml/qwerty.xml"
+    }
+]

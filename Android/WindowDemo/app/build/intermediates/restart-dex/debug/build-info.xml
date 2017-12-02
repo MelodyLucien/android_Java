@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="23"
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
     build-mode="COLD"
-    density="xxhdpi"
+    density="xhdpi"
     format="10"
-    plugin-version="2.3.1"
-    timestamp="1498024897951"
+    plugin-version="2.3.3"
+    timestamp="1506417002320"
     token="2458524121645058238"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -18,27 +18,33 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="11" />
+        duration="0" />
     <task
         name="verifier"
-        duration="56" />
+        duration="0" />
 
-    <artifact
-        location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
     <artifact
         location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/outputs/apk/app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1498024711491"
+        timestamp="1506416220787"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/outputs/apk/app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
@@ -47,37 +53,41 @@
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
-        <artifact
-            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/outputs/apk/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1498024897951"
+        timestamp="1506416709836"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1506416890923"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1506417002320"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />

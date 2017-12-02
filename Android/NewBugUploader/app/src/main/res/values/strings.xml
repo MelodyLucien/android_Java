@@ -12,5 +12,15 @@
     <string name="compress_error">压缩日志文件错误！</string>
     <string name="compress_ok">压缩日志文件成功！</string>
     <string name="status">上传状态</string>
+    <string name="cancel_upload">取消上传</string>
+    <string name="start_approval">授权开启</string>
+    <string name="alterdialog_title">需要打开电视调试授权才可以上传日志</string>
+    <string name="log_text_retry">重试</string>
+    <string name="log_text_logupload">log上传</string>
+    <string name="log_text_please_wait">请稍后…</string>
+    <string name="log_text_collect_log">收集日志</string>
+    <string name="log_text_compress">压缩文件</string>
+    <string name="log_text_loguploading">日志上传</string>
+    <string name="log_text_logfilename">日志文件名：</string>
 
 </resources>

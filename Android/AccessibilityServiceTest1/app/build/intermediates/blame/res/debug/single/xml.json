@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/AccessibilityServiceTest1/app/build/intermediates/res/merged/debug/xml/accessibility.xml",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/AccessibilityServiceTest1/app/src/main/res/xml/accessibility.xml"
+    },
+    {
         "merged": "/home/zhouhao2/AndroidStudioProjects/AccessibilityServiceTest1/app/build/intermediates/res/merged/debug/xml/accessibility.xml",
         "source": "/home/zhouhao2/AndroidStudioProjects/AccessibilityServiceTest1/app/src/main/res/xml/accessibility.xml"
     }

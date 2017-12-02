@@ -1,5 +1,5 @@
 package com.archermind.aidl;
 
 interface ITaskCallBack {
-    void onActionBack(String str);
+    int onActionBack(String str);
 }

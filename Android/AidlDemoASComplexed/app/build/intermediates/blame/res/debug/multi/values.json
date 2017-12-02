@@ -13,11 +13,11 @@
                 "from": {
                     "file": "/home/zhouhao2/myGit/android_Java/Android/AidlDemoASComplexed/app/src/main/res/values/strings.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 125,
+                        "startOffset": 176,
                         "endColumn": 45,
-                        "endOffset": 166
+                        "endOffset": 217
                     }
                 }
             },
@@ -37,6 +37,25 @@
                         "startOffset": 59,
                         "endColumn": 64,
                         "endOffset": 119
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 166,
+                    "endColumn": 49,
+                    "endOffset": 211
+                },
+                "from": {
+                    "file": "/home/zhouhao2/myGit/android_Java/Android/AidlDemoASComplexed/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 125,
+                        "endColumn": 49,
+                        "endOffset": 170
                     }
                 }
             }

@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="log_textColor">#daffffff</color>
-    <color name="upload_tipcolor">#81ffffff</color>
+    <color name="upload_tipcolor">#f0e8e9</color>
+    <color name="RERE">#3f51b5</color>
+    <color name="log_retry_color">#02becf</color>
 </resources>

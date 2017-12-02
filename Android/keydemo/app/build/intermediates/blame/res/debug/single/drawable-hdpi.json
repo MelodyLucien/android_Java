@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_dialog_keyboard.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/ic_dialog_keyboard.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_space.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_space.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_done.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_done.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_delete.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_delete.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/icon.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/icon.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_search.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_search.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_shift.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_shift.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_left.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_left.png"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/build/intermediates/res/merged/debug/drawable-hdpi/sym_keyboard_right.png",
+        "source": "/home/zhouhao2/myGit/android_Java/Android/keydemo/app/src/main/res/drawable-hdpi/sym_keyboard_right.png"
+    }
+]

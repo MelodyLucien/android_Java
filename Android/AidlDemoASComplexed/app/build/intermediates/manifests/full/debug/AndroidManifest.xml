@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.archermind.aidl"
+    android:sharedUserId="@string/uid"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -22,10 +23,10 @@
         </activity>
 
         <service
-            android:name="com.archermind.aidl.MyService"
+            android:name="com.archermind.aidl.GlobalKeyMonitorService"
             android:process=":remote" >
             <intent-filter>
-                <action android:name="com.archermind.aidl.myservice" />
+                <action android:name="com.archermind.aidl.GlobalKeyMonitorService" />
             </intent-filter>
         </service>
     </application>

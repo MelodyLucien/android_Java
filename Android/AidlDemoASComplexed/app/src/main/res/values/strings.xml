@@ -2,6 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, AidlDemoActivity!</string>
+    <string name="uid">com.zhouhao2.test</string>
     <string name="app_name">AidlDemo</string>
 
 </resources>

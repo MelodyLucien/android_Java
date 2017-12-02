@@ -2,7 +2,6 @@ package com.archermind.aidl;
 
 import android.app.Service;
 import android.content.Intent;
-import android.os.Binder;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
@@ -10,11 +9,13 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.RemoteException;
+import android.util.ArrayMap;
 import android.util.Log;
+
 
 public class MyService extends Service {
     public final String TAG="AidlDemo.MyService";
-    private ITaskCallBack mTaskCallBack;
+	private final ArrayMap<IBinder,ITaskCallBack> mBinderTasks = new ArrayMap<IBinder,ITaskCallBack>();
     private MyHandler mH = null;
 
     @Override
@@ -48,7 +49,7 @@ public class MyService extends Service {
 		public void unregisterCallBack(IBinder b) throws RemoteException {
             b.unlinkToDeath(deathRecepient,0);
 			Log.v(TAG,"unregisterCallBack...");
-			mTaskCallBack=null;
+            mBinderTasks.remove(b);
 		}
 		
 		@Override
@@ -56,7 +57,7 @@ public class MyService extends Service {
 			b.linkToDeath(deathRecepient,0);
 			Log.v(TAG,"registerCallBack...");
             Log.i(TAG, "registerCallBack: "+b.toString());
-            mTaskCallBack=cb;
+            mBinderTasks.put(b,cb);
 		}
 		
 		@Override
@@ -67,7 +68,6 @@ public class MyService extends Service {
 		@Override
 		public void fuc02() throws RemoteException {
 			Log.v(TAG,"fuc02...");
-			mTaskCallBack.onActionBack("hello world");
 		}
 
 		@Override

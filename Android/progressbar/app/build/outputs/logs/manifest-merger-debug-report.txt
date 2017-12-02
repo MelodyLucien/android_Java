@@ -1,0 +1,75 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:1:1-36:12
+	package
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:2:2-35
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:4:2-27
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:3:2-25
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:1:11-69
+permission#com.hisense.permission.monitorkeys
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:6:2-7:21
+	android:protectionLevel
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:6:14-46
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:6:47-96
+uses-permission#com.hisense.permission.monitorkeys
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:9:2-87
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:9:19-68
+uses-sdk
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:11:2-13:35
+	android:targetSdkVersion
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:13:3-32
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:12:3-28
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml
+application
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:14:2-35:16
+	android:label
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:16:3-35
+	android:icon
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:15:3-39
+	android:theme
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:17:3-34
+activity#com.example.progressbar.MainActivity
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:18:3-25:14
+	android:label
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:20:4-47
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:19:4-32
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:21:4-24:20
+action#android.intent.action.MAIN
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:22:5-57
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:22:13-54
+category#android.intent.category.LAUNCHER
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:23:5-65
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:23:15-62
+service#com.example.progressbar.MyLocalStartService
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:26:3-27:13
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:26:12-47
+receiver#com.example.progressbar.MyReceiver
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:29:3-34:14
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:29:13-39
+intent-filter#com.hisense.android.tv.monitorkeys
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:30:4-33:20
+action#com.hisense.android.tv.monitorkeys
+ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:32:5-72
+	android:name
+		ADDED from /home/zhouhao2/myGit/android_Java/Android/progressbar/app/src/main/AndroidManifest.xml:32:13-62

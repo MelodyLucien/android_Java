@@ -56,11 +56,11 @@
         "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/anim/abc_slide_out_bottom.xml"
-    },
-    {
         "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
         "source": "/home/zhouhao2/.android/build-cache/eae3a3336dfe5adecc49b83ae7e2dcda7cbb9677/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/home/zhouhao2/myGit/android_Java/Android/WindowDemo/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/home/zhouhao2/.android/build-cache/e1dc7699bd22c145e8b4e8e14b828782f3403cd5/output/res/anim/abc_slide_out_bottom.xml"
     }
 ]
