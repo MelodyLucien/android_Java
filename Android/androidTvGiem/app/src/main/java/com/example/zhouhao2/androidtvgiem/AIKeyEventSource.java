@@ -4,42 +4,42 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.GlobalKeyMonitorManager;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
-import android.os.Parcel;
 import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 
-import com.jamdeo.system_server.library.GlobalInputEventMonitorRequest;
-import com.jamdeo.system_server.library.GlobalInputEventMonitorRequest.*;
+import android.os.GlobalInputEventMonitorRequest;
 
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-/**
- * Created by Brljefso on 2017-4-1 0001.
- */
 
 public class AIKeyEventSource {
     private static final String TAG = AIKeyEventSource.class.getSimpleName();
-
-    //GlobalInputEventMonitoringService
-    private static final String GIEM_SERVICE_NAME = "GlobalInputEventMonitor";
-    private static final String GIEM_DESCRIPTOR = "GlobalInputEventMonitor";
-    private static final int TRANSACTION_START_MONITOR = IBinder.FIRST_CALL_TRANSACTION + 0;
-    private static final int TRANSACTION_CANCEL_MONITOR = IBinder.FIRST_CALL_TRANSACTION + 1;
 
     //Keys (broadcasts) Actions related
     private static final String MONITOR_TOKEN = "com.hisense.tv.aivirtualassistant.key_monitor";
     private static final String INPUT_EVENT_ACTION = MONITOR_TOKEN;
     private static final String EXTRAS_KEY = "keycode";
+
+    private GlobalKeyMonitorManager mService = GlobalKeyMonitorManager.getInstance(new GlobalKeyMonitorManager.ConnectionListenner() {
+        @Override
+        public void onConnectedOK() {
+            Log.i(TAG, "onConnectedOK: ");
+        }
+
+        @Override
+        public void onConnectedFail() {
+            Log.i(TAG, "onConnectedFail: ");
+        }
+    });
+
 
     private static final boolean DEBUG = true;
 
@@ -101,7 +101,7 @@ public class AIKeyEventSource {
         return null;
     }
 
-    private void init() {
+    public void init() {
         Log.i(TAG,"key event service init()");
         final HandlerThread thread = new HandlerThread(TAG);
         thread.start();
@@ -160,8 +160,6 @@ public class AIKeyEventSource {
         if (context != null
                 && (AIKeyEventSource.SingletonHolder.sInstance.mContextRef == null || AIKeyEventSource.SingletonHolder.sInstance.mContextRef.get() == null)) {
             AIKeyEventSource.SingletonHolder.sInstance.mContextRef = new WeakReference<Context>(context.getApplicationContext());
-            //start Monitoring keys
-            AIKeyEventSource.SingletonHolder.sInstance.init();
         }
         return AIKeyEventSource.SingletonHolder.sInstance;
     }
@@ -220,105 +218,69 @@ public class AIKeyEventSource {
     }
 
     //
-    public static void startMonitoringKeyEvent() {
+    public  void startMonitoringKeyEvent() {
         if (DEBUG) {
             Log.d(TAG, "startMonitoringKeyEvent");
         }
-
         //monitor keys that we want
         int keysLength=mKeys.size();
+        GlobalInputEventMonitorRequest request = new GlobalInputEventMonitorRequest(
+                GlobalInputEventMonitorRequest.RequestType.MONITOR_EVENT);
+        GlobalInputEventMonitorRequest.RequestItem[] items = new GlobalInputEventMonitorRequest.RequestItem[keysLength];
         for (int i = 0;i< keysLength;i++){
             int keycode=mKeys.get(i);
-            GlobalInputEventMonitorRequest request = new GlobalInputEventMonitorRequest(
-                    GlobalInputEventMonitorRequest.RequestType.MONITOR_EVENT);
-            RequestItem[] items = new RequestItem[1];
             final Intent intent = new Intent();
             intent.setAction(INPUT_EVENT_ACTION);
             intent.putExtra(EXTRAS_KEY, keycode);
-            items[0] = new RequestItem(InputEventType.KEY_EVENT,keycode ,
-                    Action.FILTER_KEEP_MONITOR, intent);
-            request.setRequestItems(items);
-            sendMonitorRequestToGIEMService(request, MONITOR_TOKEN+keycode);
+            items[i] = new GlobalInputEventMonitorRequest.RequestItem(GlobalInputEventMonitorRequest.InputEventType.KEY_EVENT,keycode ,
+                    GlobalInputEventMonitorRequest.Action.FILTER_KEEP_MONITOR, intent);
         }
+        request.setRequestItems(items);
+        sendMonitorRequestToGIEMService(request);
     }
-
-    public static IBinder getGIEMServiceManager(String name){
-        Log.d(TAG, "getGIEMServiceManager() called with: name = [" + name + "]");
-        IBinder mBinder=null;
-        try {
-            Class<?> serviceManager = Class.forName("android.os.ServiceManager");
-            Method method=serviceManager.getDeclaredMethod("getService",String.class);
-            mBinder= (IBinder) method.invoke(serviceManager,name);
-        }catch(ClassNotFoundException e){
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }
-        return mBinder;
-    }
-
     //Send request item with monitor token to GIEM service
-    public static void sendMonitorRequestToGIEMService(GlobalInputEventMonitorRequest request, String monitorToken) {
-        Log.d(TAG, "sendMonitorRequestToGIEMService() called with: request = [" + request + "], monitorToken = [" + monitorToken + "]");
-        IBinder service =getGIEMServiceManager(GIEM_SERVICE_NAME);
-        if (service == null) {
+    public  void sendMonitorRequestToGIEMService(GlobalInputEventMonitorRequest request) {
+        Log.d(TAG, "sendMonitorRequestToGIEMService() called with: request = [" + request + "]");
+        if (mService == null) {
             Log.w(TAG, "global input event monitoring service is not available!!");
             return;
         }
-        Parcel data = Parcel.obtain();
-        data.writeInterfaceToken(GIEM_DESCRIPTOR);
-        data.writeString(monitorToken);
-        request.writeToParcel(data, 0);
-        Parcel reply = Parcel.obtain();
-
         try {
-            if (!service.transact(TRANSACTION_START_MONITOR, data, reply, 0)) {
-                Log.w(TAG, "Binder transact on global input event monitoring service failed for: "
-                        + TRANSACTION_START_MONITOR);
-                return;
-            }
+            mService.processMonitorRequest(MONITOR_TOKEN,request);
         } catch (RemoteException e) {
-            Log.e(TAG, "Exception occured on starting monitoring input event.", e);
-            return;
-        } finally {
-            // recycle the parcels
-            data.recycle();
-            reply.recycle();
+            e.printStackTrace();
         }
     }
     // stop monitoring input event
-    public static void stopMonitoringInputEvent() {
+    public  void stopMonitoringInputEvent() {
         if (DEBUG) {
             Log.d(TAG, "stopMonitoringInputEvent");
         }
-        IBinder service = getGIEMServiceManager(GIEM_SERVICE_NAME);
-
-        if (service == null) {
-            Log.w(TAG, "global input event monitoring service is not available!!");
-            return;
-        }
-        Parcel data = Parcel.obtain();
-        data.writeString(MONITOR_TOKEN);
-        Parcel reply = Parcel.obtain();
-        data.writeInterfaceToken(GIEM_DESCRIPTOR);
-
         try {
-            if (!service.transact(TRANSACTION_CANCEL_MONITOR, data, reply, 0)) {
-                Log.w(TAG, "Binder transact on global input event monitoring service failed for: "
-                        + TRANSACTION_CANCEL_MONITOR);
-                return;
-            }
+            mService.processMonitorCancel(MONITOR_TOKEN);
         } catch (RemoteException e) {
-            Log.e(TAG, "Exception occured on start monitoring input event.", e);
-            return;
-        } finally {
-            // recycle the parcels
-            data.recycle();
-            reply.recycle();
+            e.printStackTrace();
         }
+    }
+    // stop monitoring input event
+    public  void startProhibit() {
+        if (DEBUG) {
+            Log.d(TAG, "stopMonitoringInputEvent");
+        }
+        mService.prohibitKeys(new int[]{4,19,21,22,24,25});
+    }
+    // stop monitoring input event
+    public  void startRestore() {
+        if (DEBUG) {
+            Log.d(TAG, "stopMonitoringInputEvent");
+        }
+        mService.restoreKeys();
+    }
+    // stop monitoring input event
+    public  void startRelease() {
+        if (DEBUG) {
+            Log.d(TAG, "stopMonitoringInputEvent");
+        }
+        mService.releaseKeysOnly(new int[]{4,19,21,22,24,25});
     }
 }
