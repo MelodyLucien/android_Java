@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private AIKeyEventSourceOld mAIKeyEventSource = null;
+    private OldInvokerExample mAIKeyEventSource = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,33 +22,33 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                mAIKeyEventSource = new AIKeyEventSourceOld();
+                mAIKeyEventSource = new OldInvokerExample();
             }
         });
 
         mBtnNewTest.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                AIKeyEventSource.getInstance(MainActivity.this.getApplicationContext()).init();
+                NewInvokerExample.getInstance(MainActivity.this.getApplicationContext()).init();
             }
         });
 
         mBtnNewTest_prohibit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AIKeyEventSource.getInstance(MainActivity.this.getApplicationContext()).startProhibit();
+                NewInvokerExample.getInstance(MainActivity.this.getApplicationContext()).startProhibit();
             }
         });
         mBtnNewTest_release.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AIKeyEventSource.getInstance(MainActivity.this.getApplicationContext()).startRelease();
+                NewInvokerExample.getInstance(MainActivity.this.getApplicationContext()).startRelease();
             }
         });
         mBtnNewTest_restore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AIKeyEventSource.getInstance(MainActivity.this.getApplicationContext()).startRestore();
+                NewInvokerExample.getInstance(MainActivity.this.getApplicationContext()).startRestore();
             }
         });
     }

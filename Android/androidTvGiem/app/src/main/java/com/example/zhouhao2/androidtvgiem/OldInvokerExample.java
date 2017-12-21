@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * Created by Brljefso on 2017-4-1 0001.
  */
 
-public class AIKeyEventSourceOld {
-    private static final String TAG = AIKeyEventSource.class.getSimpleName();
+public class OldInvokerExample {
+    private static final String TAG = NewInvokerExample.class.getSimpleName();
 
     //GlobalInputEventMonitoringService
     private static final String GIEM_SERVICE_NAME = "GlobalInputEventMonitor";
@@ -31,14 +31,9 @@ public class AIKeyEventSourceOld {
 
     private static final boolean DEBUG = true;
 
-
-
-
-    public AIKeyEventSourceOld(){
+    public OldInvokerExample(){
         init();
     }
-
-
 
     //keys for monitoring
     public static ArrayList<Integer> mKeys= new ArrayList<>();

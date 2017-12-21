@@ -20,29 +20,19 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 
-public class AIKeyEventSource {
-    private static final String TAG = AIKeyEventSource.class.getSimpleName();
+public class NewInvokerExample {
+    private static final String TAG = NewInvokerExample.class.getSimpleName();
 
     //Keys (broadcasts) Actions related
     private static final String MONITOR_TOKEN = "com.hisense.tv.aivirtualassistant.key_monitor";
     private static final String INPUT_EVENT_ACTION = MONITOR_TOKEN;
     private static final String EXTRAS_KEY = "keycode";
 
-    private GlobalKeyMonitorManager mService = GlobalKeyMonitorManager.getInstance(new GlobalKeyMonitorManager.ConnectionListenner() {
-        @Override
-        public void onConnectedOK() {
-            Log.i(TAG, "onConnectedOK: ");
-        }
-
-        @Override
-        public void onConnectedFail() {
-            Log.i(TAG, "onConnectedFail: ");
-        }
-    });
-
+    private GlobalKeyMonitorManager mGlobalKeyMonitorManager = GlobalKeyMonitorManager.getInstance();
 
     private static final boolean DEBUG = true;
 
+    private int[] testKeys= new int[]{4, 19, 21, 22, 24, 25};
 
     private MessageHandler mHandler = null;
     private class MessageHandler extends Handler {
@@ -101,38 +91,42 @@ public class AIKeyEventSource {
         return null;
     }
 
+
+
     public void init() {
-        Log.i(TAG,"key event service init()");
-        final HandlerThread thread = new HandlerThread(TAG);
-        thread.start();
-        mHandler = new MessageHandler(thread.getLooper());
+        if(mGlobalKeyMonitorManager.isServiceAvaiable()){
+            Log.i(TAG,"key event service init()");
+            final HandlerThread thread = new HandlerThread(TAG);
+            thread.start();
+            mHandler = new MessageHandler(thread.getLooper());
 
-        registerBroadcastReceivers();
+            registerBroadcastReceivers();
 
-        initKeysList();
+            initKeysList();
 
-        Log.i(TAG, "init: thread GIEM TEST start()");
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while(true) {
-                    try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+            Log.i(TAG, "init: thread GIEM TEST start()");
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    while(true) {
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        startMonitoringKeyEvent();
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        stopMonitoringInputEvent();
                     }
-                    startMonitoringKeyEvent();
-                    try {
-                        Thread.sleep(5000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    stopMonitoringInputEvent();
                 }
-            }
-        }).start();
-
-        //startMonitoringKeyEvent();
+            }).start();
+        }else{
+            Log.i(TAG, "init: isNewGiemAvaliable false");
+        }
     }
 
     private void registerBroadcastReceivers() {
@@ -147,21 +141,21 @@ public class AIKeyEventSource {
     }
 
     public static class SingletonHolder {
-        public static AIKeyEventSource sInstance = new AIKeyEventSource();
+        public static NewInvokerExample sInstance = new NewInvokerExample();
     }
 
-    private AIKeyEventSource(){
+    private NewInvokerExample(){
         //doNothing
     }
 
 
-    public static AIKeyEventSource getInstance(Context context) {
-        Log.i(TAG,"AIKeyEventSource getInstance");
+    public static NewInvokerExample getInstance(Context context) {
+        Log.i(TAG,"NewInvokerExample getInstance");
         if (context != null
-                && (AIKeyEventSource.SingletonHolder.sInstance.mContextRef == null || AIKeyEventSource.SingletonHolder.sInstance.mContextRef.get() == null)) {
-            AIKeyEventSource.SingletonHolder.sInstance.mContextRef = new WeakReference<Context>(context.getApplicationContext());
+                && (NewInvokerExample.SingletonHolder.sInstance.mContextRef == null || NewInvokerExample.SingletonHolder.sInstance.mContextRef.get() == null)) {
+            NewInvokerExample.SingletonHolder.sInstance.mContextRef = new WeakReference<Context>(context.getApplicationContext());
         }
-        return AIKeyEventSource.SingletonHolder.sInstance;
+        return NewInvokerExample.SingletonHolder.sInstance;
     }
 
 
@@ -241,12 +235,12 @@ public class AIKeyEventSource {
     //Send request item with monitor token to GIEM service
     public  void sendMonitorRequestToGIEMService(GlobalInputEventMonitorRequest request) {
         Log.d(TAG, "sendMonitorRequestToGIEMService() called with: request = [" + request + "]");
-        if (mService == null) {
+        if (mGlobalKeyMonitorManager == null) {
             Log.w(TAG, "global input event monitoring service is not available!!");
             return;
         }
         try {
-            mService.processMonitorRequest(MONITOR_TOKEN,request);
+            mGlobalKeyMonitorManager.processMonitorRequest(MONITOR_TOKEN,request);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
@@ -257,7 +251,7 @@ public class AIKeyEventSource {
             Log.d(TAG, "stopMonitoringInputEvent");
         }
         try {
-            mService.processMonitorCancel(MONITOR_TOKEN);
+            mGlobalKeyMonitorManager.processMonitorCancel(MONITOR_TOKEN);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
@@ -265,22 +259,28 @@ public class AIKeyEventSource {
     // stop monitoring input event
     public  void startProhibit() {
         if (DEBUG) {
-            Log.d(TAG, "stopMonitoringInputEvent");
+            Log.d(TAG, "startProhibit");
         }
-        mService.prohibitKeys(new int[]{4,19,21,22,24,25});
+        if(mGlobalKeyMonitorManager.isServiceAvaiable()){
+            mGlobalKeyMonitorManager.prohibitKeys(testKeys);
+        }
     }
     // stop monitoring input event
     public  void startRestore() {
         if (DEBUG) {
-            Log.d(TAG, "stopMonitoringInputEvent");
+            Log.d(TAG, "startRestore");
         }
-        mService.restoreKeys();
+        if(mGlobalKeyMonitorManager.isServiceAvaiable()) {
+            mGlobalKeyMonitorManager.restoreKeys();
+        }
     }
     // stop monitoring input event
     public  void startRelease() {
         if (DEBUG) {
-            Log.d(TAG, "stopMonitoringInputEvent");
+            Log.d(TAG, "startRelease");
         }
-        mService.releaseKeysOnly(new int[]{4,19,21,22,24,25});
+        if(mGlobalKeyMonitorManager.isServiceAvaiable()) {
+            mGlobalKeyMonitorManager.releaseKeysOnly(testKeys);
+        }
     }
 }

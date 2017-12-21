@@ -14,24 +14,22 @@ public class GlobalKeyMonitorManager implements GlobalInputEventMonitor {
     private static GlobalKeyMonitorManager mGlobalKeyMonitorManager = null;
 
     private Binder mBinder = null;
-    private GlobalInputEventMonitor  mService = null;
+    private static GlobalInputEventMonitor  mGlobalInputEventMonitorProxy = null;
     private boolean isRestored = false;
+    private boolean mIsServiceAvaliable = false;
 
     //process flag
     private static int FLAG_PROHIBIT = 0;
     private static int FLAG_RELEASE_ONLY = 1;
 
-    private static ConnectionListenner mConnectListenner = null;
-
     private GlobalKeyMonitorManager() {
         mBinder = new MyBinder();
-        bind();
+        mIsServiceAvaliable=isNewGiemAvaliable();
         isRestored = true;
     }
 
-    public static synchronized GlobalKeyMonitorManager getInstance(ConnectionListenner listenner){
+    public static synchronized GlobalKeyMonitorManager getInstance(){
         if(mGlobalKeyMonitorManager == null){
-            mConnectListenner = listenner;
             mGlobalKeyMonitorManager = new GlobalKeyMonitorManager();
             return mGlobalKeyMonitorManager;
         }
@@ -64,15 +62,15 @@ public class GlobalKeyMonitorManager implements GlobalInputEventMonitor {
 
     @Override
     public synchronized void processMonitorRequest(String token, GlobalInputEventMonitorRequest request) throws RemoteException {
-        if(mService != null){
-            mService.processMonitorRequest(token,request);
+        if(mGlobalInputEventMonitorProxy != null){
+            mGlobalInputEventMonitorProxy.processMonitorRequest(token,request);
         }
     }
 
     @Override
     public synchronized void processMonitorCancel(String token) throws RemoteException {
-        if(mService != null){
-            mService.processMonitorCancel(token);
+        if(mGlobalInputEventMonitorProxy != null){
+            mGlobalInputEventMonitorProxy.processMonitorCancel(token);
         }
     }
 
@@ -96,9 +94,9 @@ public class GlobalKeyMonitorManager implements GlobalInputEventMonitor {
     public synchronized void processKeysByFlag(IBinder mBinder, int action, int[] keys) throws RemoteException {
         if(isRestored ) {
             isRestored = false;
-            if (keys != null && mService != null) {
+            if (keys != null && mGlobalInputEventMonitorProxy != null) {
                 try {
-                    mService.processKeysByFlag(mBinder,action, keys);
+                    mGlobalInputEventMonitorProxy.processKeysByFlag(mBinder,action, keys);
                     Log.i(TAG, "prohibitKeys: callingPid ：" + Binder.getCallingPid());
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -121,9 +119,9 @@ public class GlobalKeyMonitorManager implements GlobalInputEventMonitor {
     public synchronized void restoreKeys(IBinder b) throws RemoteException {
         if(!isRestored ) {
             isRestored = true;
-            if (b != null && mService != null) {
+            if (b != null && mGlobalInputEventMonitorProxy != null) {
                 try {
-                    mService.restoreKeys(mBinder);
+                    mGlobalInputEventMonitorProxy.restoreKeys(mBinder);
                     Log.i(TAG, "restoreKeys: callingPid ：" + Binder.getCallingPid());
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -151,28 +149,18 @@ public class GlobalKeyMonitorManager implements GlobalInputEventMonitor {
         }
     }
 
-    private synchronized boolean bind(){
-        mService = getGIEMServiceManager();
-        if(mConnectListenner == null){
-            try {
-                throw new Exception("not define Connecttionlistenner");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        if(mService != null){
-            mConnectListenner.onConnectedOK();
-            Log.i(TAG, "bind: connect successful");
-            return true;
-        }else{
-            mConnectListenner.onConnectedFail();
-            Log.i(TAG, "bind: connect fail");
-            return false;
-        }
+    public boolean isServiceAvaiable(){
+        return mIsServiceAvaliable;
     }
 
-    public interface ConnectionListenner{
-        void onConnectedOK();
-        void onConnectedFail();
+    private  boolean isNewGiemAvaliable(){
+        mGlobalInputEventMonitorProxy = getGIEMServiceManager();
+        if(mGlobalInputEventMonitorProxy != null){
+            Log.i(TAG, "isNewGiemAvaliable: true");
+            return true;
+        }else{
+            Log.i(TAG, "isNewGiemAvaliable: false");
+            return false;
+        }
     }
 }
