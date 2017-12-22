@@ -1,37 +1,23 @@
 package com.example.zhouhao2.androidtvgiem;
 
+import android.content.Context;
+import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private OldInvokerExample mAIKeyEventSource = null;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_layout);
-        Button mBtnOldTest = (Button) findViewById(R.id.button_old_test);
         Button mBtnNewTest = (Button) findViewById(R.id.button_new_test);
         Button mBtnNewTest_prohibit = (Button) findViewById(R.id.btn_prohibit);
         Button mBtnNewTest_release = (Button) findViewById(R.id.btn_release);
         Button mBtnNewTest_restore = (Button) findViewById(R.id.btn_retore);
+        PowerManager pm=(PowerManager)getSystemService(Context.POWER_SERVICE);
 
-        mBtnOldTest.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                mAIKeyEventSource = new OldInvokerExample();
-            }
-        });
-
-        mBtnNewTest.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                NewInvokerExample.getInstance(MainActivity.this.getApplicationContext()).init();
-            }
-        });
 
         mBtnNewTest_prohibit.setOnClickListener(new View.OnClickListener() {
             @Override
