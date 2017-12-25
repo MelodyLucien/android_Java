@@ -15,11 +15,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
-
 public class GlobalKeyMonitorService extends Service {
     public final String TAG = "GlobalKeyMonitorService";
     public final static int PASS_TO_USER = 0;
     public final static int NOT_PASS_TO_USER = 1;
+    //process flag
+    public static final int FLAG_PROHIBIT = 0;
+    public static final int FLAG_RELEASE_ONLY = 1;
 
     /**
      * two list for managing client binding info
@@ -31,11 +33,13 @@ public class GlobalKeyMonitorService extends Service {
         private int mPid = 0;
         private IBinder mBinder = null;
         private ArrayList<Integer> mKeyEventLists = null;
+        private int action = -1;
 
-        public MyDeathRecipient(int pid, IBinder b,ArrayList<Integer> keyEventLists) {
+        public MyDeathRecipient(int pid, IBinder b,int action,ArrayList<Integer> keyEventLists) {
             mPid = pid;
             mBinder = b;
             mKeyEventLists = keyEventLists;
+            this.action = action;
         }
 
         public ArrayList<Integer> getKeyEventLists(){
@@ -62,6 +66,13 @@ public class GlobalKeyMonitorService extends Service {
             return null;
         }
 
+        public int getAction(){
+            if(action != -1){
+               return action;
+            }
+            return -1;
+        }
+
         @Override
         public String toString() {
             return "[ Pid :"+mPid+" Binder :"+mBinder.toString()+" Keys: "+mKeyEventLists.toString()+"]";
@@ -72,7 +83,7 @@ public class GlobalKeyMonitorService extends Service {
 
     @Override
     public void onCreate() {
-        Log.v(TAG, "onCreate()...");
+        Log.v(TAG, "GlobalKeyMonitorService onCreate()...");
         HandlerThread serviceThread = new HandlerThread(TAG, Process.THREAD_PRIORITY_BACKGROUND);
         serviceThread.start();
         mH = new MyHandler(serviceThread.getLooper());
@@ -99,18 +110,22 @@ public class GlobalKeyMonitorService extends Service {
     private final IGlobalKeyMonitor.Stub mBinder = new IGlobalKeyMonitor.Stub() {
 
         @Override
-        public void processMonitorRequest(String token,GlobalInputEventMonitorRequest request) throws RemoteException {
-            Log.i(TAG, "processMonitorRequest: ");
-        }
-
-        @Override
-        public void processMonitorCancel(String token) throws RemoteException {
-            Log.i(TAG, "processMonitorCancel: ");
-        }
-
-        @Override
-        public void releaseKeysOnly(IBinder b, int[] cb)throws RemoteException {
-
+        public void processKeysByFlag(IBinder b, int action, int[] keys) throws RemoteException {
+            {
+                Log.i(TAG, "existing binders: " + mMyDeathRecipents.toString());
+                ArrayList<Integer> tmpKeys = new ArrayList<>();
+                if (keys != null && keys.length != 0) {
+                    for (int i = 0; i < keys.length; i++) {
+                        tmpKeys.add(keys[i]);
+                        Log.i(TAG, "prohibit keys:" + keys[i]);
+                    }
+                }
+                MyDeathRecipient recipient = new MyDeathRecipient(Binder.getCallingPid(),b,action,tmpKeys);
+                b.linkToDeath(recipient, 0);
+                addRegisterInfo(Binder.getCallingPid(),recipient);
+                Log.i(TAG, "existing binders: " + mMyDeathRecipents.toString());
+                Log.i(TAG, "prohibitKeys: callingpid :" + Binder.getCallingPid());
+            }
         }
 
         @Override
@@ -120,23 +135,6 @@ public class GlobalKeyMonitorService extends Service {
             removeRegisterInfo(Binder.getCallingPid());
             Log.i(TAG, "existing binders: " + mMyDeathRecipents.toString());
             Log.i(TAG, "restore binders: pid :" + Binder.getCallingPid());
-        }
-
-        @Override
-        public void prohibitKeys(IBinder b, int[] cb) throws RemoteException {
-            Log.i(TAG, "existing binders: " + mMyDeathRecipents.toString());
-            ArrayList<Integer> keys = new ArrayList<>();
-            if (cb != null && cb.length != 0) {
-                for (int i = 0; i < cb.length; i++) {
-                    keys.add(cb[i]);
-                    Log.i(TAG, "prohibit keys:" + cb[i]);
-                }
-            }
-            MyDeathRecipient recipient = new MyDeathRecipient(Binder.getCallingPid(), b,keys);
-            b.linkToDeath(recipient, 0);
-            addRegisterInfo(Binder.getCallingPid(),recipient);
-            Log.i(TAG, "existing binders: " + mMyDeathRecipents.toString());
-            Log.i(TAG, "prohibitKeys: callingpid :" + Binder.getCallingPid());
         }
     };
 
@@ -194,9 +192,20 @@ public class GlobalKeyMonitorService extends Service {
                 Iterator<MyDeathRecipient> iterator = mMyDeathRecipents.values().iterator();
                 while(iterator.hasNext()) {
                     MyDeathRecipient recipient = iterator.next();
-                    ArrayList<Integer> keys = recipient.getKeyEventLists();
-                    Log.i(TAG, "dispatch2Tasks: "+keys.toString());
-                    return NOT_PASS_TO_USER;
+                    if(recipient != null){
+                        ArrayList<Integer> keys = recipient.getKeyEventLists();
+                        switch (recipient.getAction()){
+                            case FLAG_PROHIBIT:
+                                Log.i(TAG, "dispatch2Tasks: FLAG_PROHIBIT  "+keys.toString());
+                                break;
+                            case FLAG_RELEASE_ONLY:
+                                Log.i(TAG, "dispatch2Tasks: FLAG_RELEASE_ONLY "+keys.toString());
+                                break;
+                            default:
+                                break;
+                        }
+                        return NOT_PASS_TO_USER;
+                    }
                 }
             }
             return PASS_TO_USER;

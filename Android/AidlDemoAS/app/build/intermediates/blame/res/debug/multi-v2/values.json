@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/zhouhao2/myGit/android_Java/Android/AidlDemoAS/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/zhouhao2/myGit/android_Java/Android/AidlDemoAS/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "4,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "125,59",
+                        "endColumns": "45,64",
+                        "endOffsets": "166,119"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,101",
+                        "endColumns": "45,64",
+                        "endOffsets": "96,161"
+                    }
+                }
+            ]
+        }
+    ]
+}

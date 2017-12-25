@@ -1,9 +1,11 @@
 package com.archermind.aidl;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -38,20 +40,24 @@ public class AidlDemoActivity extends Activity implements OnClickListener {
 			    mGlobalKeyMonitorManager.bind();
                 break;
 			case R.id.registcallbak:
-                int[] keys = new int[]{62,128,4};
-				try {
-					mGlobalKeyMonitorManager.processMonitorRequest("zhouhao2", new GlobalInputEventMonitorRequest(GlobalInputEventMonitorRequest.RequestType.MONITOR_EVENT));
+               int[] keys = new int[]{62,128,4};
+				/* try {
+					GlobalInputEventMonitorRequest.RequestItem requestItem= new GlobalInputEventMonitorRequest.RequestItem(GlobalInputEventMonitorRequest.InputEventType.MOTION_EVENT,
+							KeyEvent.KEYCODE_MENU,GlobalInputEventMonitorRequest.Action.FILTER_KEEP_MONITOR,new Intent("sdfd"));
+					GlobalInputEventMonitorRequest request=new GlobalInputEventMonitorRequest(GlobalInputEventMonitorRequest.RequestType.MONITOR_EVENT);
+					request.setRequestItems(new GlobalInputEventMonitorRequest.RequestItem[]{requestItem});
+					mGlobalKeyMonitorManager.processMonitorRequest("zhouhao2", request);
 				} catch (RemoteException e) {
 					e.printStackTrace();
-				}
-				mGlobalKeyMonitorManager.prohibitKeys(keys);
+				}*/
+				mGlobalKeyMonitorManager.releaseKeysOnly(keys);
 				break;
 			case R.id.unregistercallback:
-				try {
-					mGlobalKeyMonitorManager.processMonitorCancel("sdfdsf");
+/*				try {
+					mGlobalKeyMonitorManager.processMonitorCancel("zhouhao2");
 				} catch (RemoteException e) {
 					e.printStackTrace();
-				}
+				}*/
 				mGlobalKeyMonitorManager.restoreKeys();
 				break;
 		  default:

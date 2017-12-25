@@ -131,7 +131,7 @@ public class MainConstants {
                     String serialNumberTemp = null;
                     try {
                         Method method = FactoryManager.class.getDeclaredMethod(
-                                "getSerialNewNumber",null);
+                                "getSerialNewNumber",new Class<?>[]{});
                         if (method != null) {
                             System.out.println("ok!! it is exist!!!");
                             serialNumberTemp = factoryManager

@@ -31,7 +31,7 @@ import android.view.KeyEvent;
 import android.view.WindowManager;
 import android.view.accessibility.AccessibilityEvent;
 
-import com.hisense.vidaaassistant.R;
+import com.hisense.vidaaassistant.log.R;
 import com.hisense.vidaaassistant.log.newuploader.BugReport2Ftp;
 import com.hisense.vidaaassistant.log.utils.KeySequenceListenner;
 

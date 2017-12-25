@@ -22,6 +22,10 @@ public class GlobalKeyMonitorManager extends IGlobalKeyMonitor.Stub {
     private Context mContext = null;
     private boolean isRestored = false;
 
+    //process flag
+    public static int FLAG_PROHIBIT = 0;
+    public static int FLAG_RELEASE_ONLY = 1;
+
     private GlobalKeyMonitorManager(Context mContext) {
         this.mContext = mContext;
         mBinder = new MyBinder();
@@ -36,36 +40,29 @@ public class GlobalKeyMonitorManager extends IGlobalKeyMonitor.Stub {
         return mGlobalKeyMonitorManager;
     }
 
-    @Override
-    public synchronized void processMonitorRequest(String token,GlobalInputEventMonitorRequest request) throws RemoteException {
-        if(mService != null){
-            mService.processMonitorRequest(token,request);
-        }
-    }
-
-    @Override
-    public synchronized void processMonitorCancel(String token) throws RemoteException {
-        if(mService != null){
-            mService.processMonitorCancel(token);
-        }
-    }
-
-
-    public synchronized void  prohibitKeys(int[] keys){
+    public synchronized void prohibitKeys(int[] keys){
         try {
-            prohibitKeys(mGlobalKeyMonitorManager.getBinder(),keys);
+            processKeysByFlag(mGlobalKeyMonitorManager.getBinder(),FLAG_PROHIBIT,keys);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public synchronized void releaseKeysOnly(int[] keys){
+        try {
+            processKeysByFlag(mGlobalKeyMonitorManager.getBinder(),FLAG_RELEASE_ONLY,keys);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    public synchronized void  prohibitKeys(IBinder mBinder,int[] keys) throws RemoteException {
+    public synchronized void processKeysByFlag(IBinder mBinder,int action, int[] keys) throws RemoteException {
         if(isRestored ) {
             isRestored = false;
             if (keys != null && mService != null) {
                 try {
-                    mService.prohibitKeys(mBinder, keys);
+                    mService.processKeysByFlag(mBinder,action, keys);
                     Log.i(TAG, "prohibitKeys: callingPid ：" + Binder.getCallingPid());
                 } catch (RemoteException e) {
                     e.printStackTrace();
@@ -74,11 +71,6 @@ public class GlobalKeyMonitorManager extends IGlobalKeyMonitor.Stub {
         }else{
             Log.i(TAG, "please restore before prohibit!!");
         }
-    }
-
-    @Override
-    public synchronized void releaseKeysOnly(IBinder b, int[] keys) throws RemoteException {
-
     }
 
     public synchronized void restoreKeys(){

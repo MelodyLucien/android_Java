@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon Dec 25 17:43:25 CST 2017
+0.baseType=DIRECTORY
+0.base=/home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+0.set=DEX
+count=1

@@ -8,7 +8,6 @@ import android.util.Log;
 
 
 import com.hisense.vidaaassistant.log.dump.ConCurCountDownWorker;
-import com.hisense.vidaaassistant.log.upload.HttpUploader;
 import com.hisense.vidaaassistant.log.upload.IUploader;
 import com.hisense.vidaaassistant.log.upload.SFtpUploader;
 import com.hisense.vidaaassistant.log.zip.ZipUtil;
@@ -144,7 +143,8 @@ public class MainFlowControlHandler extends Handler {
     public boolean upload() {
         Log.i(TAG, "uploadFile is : "+MainConstants.COMPRESSED_TO_PATH_DIR
                 + MainConstants.getUploadFileName(mContext));
-        IUploader uploader = new HttpUploader(MainFlowControlHandler.this);
+        //IUploader uploader = new HttpUploader(MainFlowControlHandler.this);
+        IUploader uploader = new SFtpUploader(MainFlowControlHandler.this);
         uploader.uploadFile(TAG,MainConstants.COMPRESSED_TO_PATH_DIR
                 + MainConstants.getUploadFileName(mContext), mContext);
         return true;

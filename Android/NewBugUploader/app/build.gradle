@@ -9,8 +9,9 @@ android {
         exclude 'META-INF/DEPENDENCIES'
     }
     defaultConfig {
-        applicationId "com.hisense.vidaaassistant"
+        applicationId "com.hisense.vidaaassistant.log"
         minSdkVersion 16
+        multiDexEnabled true
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -34,9 +35,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('/home/zhouhao2/myGit/android_Java/Android/NewBugUploader/libs/jsch-0.1.50.jar')
     compile files('/home/zhouhao2/myGit/android_Java/Android/NewBugUploader/libs/classes.jar')
-    compile files('/home/zhouhao2/myGit/android_Java/Android/NewBugUploader/libs/httpmime-4.5.3.jar')
-    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
-    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
 }
 
 

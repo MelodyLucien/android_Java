@@ -42,31 +42,6 @@ case INTERFACE_TRANSACTION:
 reply.writeString(DESCRIPTOR);
 return true;
 }
-case TRANSACTION_processMonitorRequest:
-{
-data.enforceInterface(DESCRIPTOR);
-java.lang.String _arg0;
-_arg0 = data.readString();
-com.archermind.aidl.GlobalInputEventMonitorRequest _arg1;
-if ((0!=data.readInt())) {
-_arg1 = com.archermind.aidl.GlobalInputEventMonitorRequest.CREATOR.createFromParcel(data);
-}
-else {
-_arg1 = null;
-}
-this.processMonitorRequest(_arg0, _arg1);
-reply.writeNoException();
-return true;
-}
-case TRANSACTION_processMonitorCancel:
-{
-data.enforceInterface(DESCRIPTOR);
-java.lang.String _arg0;
-_arg0 = data.readString();
-this.processMonitorCancel(_arg0);
-reply.writeNoException();
-return true;
-}
 case TRANSACTION_processKeysByFlag:
 {
 data.enforceInterface(DESCRIPTOR);
@@ -107,43 +82,6 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-@Override public void processMonitorRequest(java.lang.String token, com.archermind.aidl.GlobalInputEventMonitorRequest request) throws android.os.RemoteException
-{
-android.os.Parcel _data = android.os.Parcel.obtain();
-android.os.Parcel _reply = android.os.Parcel.obtain();
-try {
-_data.writeInterfaceToken(DESCRIPTOR);
-_data.writeString(token);
-if ((request!=null)) {
-_data.writeInt(1);
-request.writeToParcel(_data, 0);
-}
-else {
-_data.writeInt(0);
-}
-mRemote.transact(Stub.TRANSACTION_processMonitorRequest, _data, _reply, 0);
-_reply.readException();
-}
-finally {
-_reply.recycle();
-_data.recycle();
-}
-}
-@Override public void processMonitorCancel(java.lang.String token) throws android.os.RemoteException
-{
-android.os.Parcel _data = android.os.Parcel.obtain();
-android.os.Parcel _reply = android.os.Parcel.obtain();
-try {
-_data.writeInterfaceToken(DESCRIPTOR);
-_data.writeString(token);
-mRemote.transact(Stub.TRANSACTION_processMonitorCancel, _data, _reply, 0);
-_reply.readException();
-}
-finally {
-_reply.recycle();
-_data.recycle();
-}
-}
 @Override public void processKeysByFlag(android.os.IBinder b, int action, int[] keys) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
@@ -177,13 +115,9 @@ _data.recycle();
 }
 }
 }
-static final int TRANSACTION_processMonitorRequest = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
-static final int TRANSACTION_processMonitorCancel = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
-static final int TRANSACTION_processKeysByFlag = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);
-static final int TRANSACTION_restoreKeys = (android.os.IBinder.FIRST_CALL_TRANSACTION + 3);
+static final int TRANSACTION_processKeysByFlag = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);
+static final int TRANSACTION_restoreKeys = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
 }
-public void processMonitorRequest(java.lang.String token, com.archermind.aidl.GlobalInputEventMonitorRequest request) throws android.os.RemoteException;
-public void processMonitorCancel(java.lang.String token) throws android.os.RemoteException;
 public void processKeysByFlag(android.os.IBinder b, int action, int[] keys) throws android.os.RemoteException;
 public void restoreKeys(android.os.IBinder b) throws android.os.RemoteException;
 }

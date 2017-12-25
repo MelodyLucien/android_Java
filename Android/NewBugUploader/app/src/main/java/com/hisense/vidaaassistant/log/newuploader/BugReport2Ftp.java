@@ -22,7 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.hisense.vidaaassistant.R;
+import com.hisense.vidaaassistant.log.R;
 import com.hisense.vidaaassistant.log.mainflow.MainConstants;
 import com.hisense.vidaaassistant.log.mainflow.MainFlowControlHandler;
 import com.hisense.vidaaassistant.log.service.KeyMonitorService;
@@ -308,7 +308,6 @@ public class BugReport2Ftp extends ActionBarActivity {
         }
         return true;
     }
-
 
     @Override
     public void onBackPressed() {

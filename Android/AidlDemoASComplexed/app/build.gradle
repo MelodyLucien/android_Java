@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 24
     buildToolsVersion "25.0.3"
 
     defaultConfig {
         applicationId "com.archermind.aidl"
-        minSdkVersion 10
-        targetSdkVersion 10
+        minSdkVersion 24
+        targetSdkVersion 24
     }
 
     buildTypes {
