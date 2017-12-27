@@ -1,1 +1,1 @@
-[{"name":"44a438fdcff62462bf06940fd6015f129dcc86f1","index":0,"scopes":["PROJECT"],"types":["DEX_ARCHIVE"],"format":"DIRECTORY","present":true}]
+[{"name":"android.local.jars:servicemanager.jar:c9ae177ed073ef5203e728899c0ef210545ee2a4-4","index":4,"scopes":["EXTERNAL_LIBRARIES"],"types":["DEX_ARCHIVE"],"format":"JAR","present":true},{"name":"44a438fdcff62462bf06940fd6015f129dcc86f1","index":5,"scopes":["PROJECT"],"types":["DEX_ARCHIVE"],"format":"DIRECTORY","present":true}]

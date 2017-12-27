@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.archermind.aidl"
+    package="com.archermind.os"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -14,7 +14,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
         <activity
-            android:name=".AidlDemoActivity"
+            android:name="com.archermind.os.AidlDemoActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +24,24 @@
         </activity>
 
         <service
-            android:name=".MyService"
+            android:name="android.os.VirusVerifierService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:isolatedProcess="true"
+            android:process=":myservice"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.archermind.aidl.MyService"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.archermind.os.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hisense.tv.search" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

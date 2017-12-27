@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:testOnly="true" >
         <activity
-            android:name="com.archermind.aidl.AidlDemoActivity"
+            android:name="com.archermind.os.AidlDemoActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,9 +28,24 @@
         </activity>
 
         <service
-            android:name="com.archermind.aidl.MyService"
+            android:name="android.os.VirusVerifierService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            android:isolatedProcess="true"
+            android:process=":myservice" >
+            <intent-filter>
+                <action android:name="com.archermind.aidl.MyService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.archermind.os.MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.hisense.tv.search" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
