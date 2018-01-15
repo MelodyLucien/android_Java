@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
-INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-47:12
+ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:3:5-32
 		INJECTED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml
@@ -48,7 +48,7 @@ ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/mai
 	android:name
 		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:11:22-77
 application
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:13:5-45:19
+ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:13:5-26:19
 	android:label
 		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:15:9-41
 	android:icon
@@ -69,35 +69,3 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:22:27-74
-service#android.os.VirusVerifierService
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:26:9-35:19
-	android:process
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:30:13-41
-	android:enabled
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:28:13-35
-	android:exported
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:31:13-36
-	android:isolatedProcess
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:29:13-43
-	android:name
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:27:13-59
-intent-filter#com.archermind.aidl.MyService
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:32:13-34:29
-action#com.archermind.aidl.MyService
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:33:17-71
-	android:name
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:33:25-69
-receiver#com.archermind.os.MyReceiver
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:37:9-44:20
-	android:enabled
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:39:13-35
-	android:exported
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:40:13-36
-	android:name
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:38:13-56
-intent-filter#com.hisense.tv.search
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:41:13-43:29
-action#com.hisense.tv.search
-ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:42:17-64
-	android:name
-		ADDED from /home/zhouhao2/myGit/android_Java/Android/AidlDemoASVirus/app/src/main/AndroidManifest.xml:42:25-61

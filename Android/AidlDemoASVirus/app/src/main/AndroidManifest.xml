@@ -23,25 +23,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name="android.os.VirusVerifierService"
-            android:enabled="true"
-            android:isolatedProcess="true"
-            android:process=":myservice"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.archermind.aidl.MyService"/>
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name="com.archermind.os.MyReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.hisense.tv.search" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>

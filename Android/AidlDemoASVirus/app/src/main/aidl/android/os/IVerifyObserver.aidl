@@ -1,5 +1,5 @@
 package android.os;
 
-interface IVerifyObserver {
+interface IVerifyObserver{
     boolean onVerify(String path);
 }

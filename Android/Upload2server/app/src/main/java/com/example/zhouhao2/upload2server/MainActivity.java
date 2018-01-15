@@ -23,7 +23,6 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private Handler h = null;
@@ -164,6 +163,5 @@ public class MainActivity extends AppCompatActivity {
                         }).show();
             }
         });
-
     }
 }

@@ -2,8 +2,6 @@ package com.hisense.vidaaassistant.log.utils;
 
 import android.util.Log;
 import android.view.KeyEvent;
-
-import java.security.Key;
 import java.util.Arrays;
 
 /**

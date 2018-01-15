@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="__local_jars__:/home/zhouhao2/myGit/android_Java/Android/NewBugUploader/libs/jsch-0.1.50.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../libs/jsch-0.1.50.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
